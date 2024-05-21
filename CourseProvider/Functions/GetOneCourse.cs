@@ -23,7 +23,6 @@ namespace CourseProvider.Functions
         [Function("GetOneCourse")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
         {
-
             var body = await new StreamReader(req.Body).ReadToEndAsync();
 
             if (body != null)
@@ -41,15 +40,8 @@ namespace CourseProvider.Functions
                     return new OkObjectResult(course);
                 }
                 catch (Exception ex) { }
-
-
-
             }
-
-
             return new BadRequestResult();
-
-
         }
     }
 }

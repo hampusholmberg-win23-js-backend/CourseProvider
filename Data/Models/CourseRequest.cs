@@ -1,4 +1,4 @@
-﻿namespace CourseProvider.RequestModels;
+﻿namespace CourseProvider.Models;
 
 public class CourseRequest
 {
