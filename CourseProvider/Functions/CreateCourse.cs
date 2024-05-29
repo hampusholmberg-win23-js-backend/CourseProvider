@@ -29,7 +29,6 @@ namespace CourseProvider.Functions
                 var result = await _dataContext.Courses.AddAsync(courseEntity);
                 await _dataContext.SaveChangesAsync();
 
-                // OSÄKER PÅ OM DENNA KOMMER FUNKA 
                 if (result.IsKeySet) 
                 {
                     return new OkObjectResult(result);
